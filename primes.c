@@ -2220,7 +2220,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 /* "primes.pyx":1
  * def primes(int nb_primes):             # <<<<<<<<<<<<<<
  *     cdef int n, i, len_p
- *     cdef int[1000] p
+ *     cdef int[90000] p
  */
 
 /* Python wrapper */
@@ -2323,7 +2323,7 @@ static PyObject *__pyx_pf_6primes_primes(CYTHON_UNUSED PyObject *__pyx_self, int
   int __pyx_v_n;
   int __pyx_v_i;
   int __pyx_v_len_p;
-  int __pyx_v_p[0x3E8];
+  int __pyx_v_p[0x15F90];
   PyObject *__pyx_v_result_as_list = NULL;
   int __pyx_7genexpr__pyx_v_prime;
   PyObject *__pyx_r = NULL;
@@ -2341,35 +2341,35 @@ static PyObject *__pyx_pf_6primes_primes(CYTHON_UNUSED PyObject *__pyx_self, int
 
   /* "primes.pyx":4
  *     cdef int n, i, len_p
- *     cdef int[1000] p
- *     if nb_primes > 1000:             # <<<<<<<<<<<<<<
- *         nb_primes = 1000
+ *     cdef int[90000] p
+ *     if nb_primes > 90000:             # <<<<<<<<<<<<<<
+ *         nb_primes = 90000
  *     len_p = 0  # The current number of elements in p.
  */
-  __pyx_t_1 = (__pyx_v_nb_primes > 0x3E8);
+  __pyx_t_1 = (__pyx_v_nb_primes > 0x15F90);
   if (__pyx_t_1) {
 
     /* "primes.pyx":5
- *     cdef int[1000] p
- *     if nb_primes > 1000:
- *         nb_primes = 1000             # <<<<<<<<<<<<<<
+ *     cdef int[90000] p
+ *     if nb_primes > 90000:
+ *         nb_primes = 90000             # <<<<<<<<<<<<<<
  *     len_p = 0  # The current number of elements in p.
  *     n = 2
  */
-    __pyx_v_nb_primes = 0x3E8;
+    __pyx_v_nb_primes = 0x15F90;
 
     /* "primes.pyx":4
  *     cdef int n, i, len_p
- *     cdef int[1000] p
- *     if nb_primes > 1000:             # <<<<<<<<<<<<<<
- *         nb_primes = 1000
+ *     cdef int[90000] p
+ *     if nb_primes > 90000:             # <<<<<<<<<<<<<<
+ *         nb_primes = 90000
  *     len_p = 0  # The current number of elements in p.
  */
   }
 
   /* "primes.pyx":6
- *     if nb_primes > 1000:
- *         nb_primes = 1000
+ *     if nb_primes > 90000:
+ *         nb_primes = 90000
  *     len_p = 0  # The current number of elements in p.             # <<<<<<<<<<<<<<
  *     n = 2
  *     while len_p < nb_primes:
@@ -2377,7 +2377,7 @@ static PyObject *__pyx_pf_6primes_primes(CYTHON_UNUSED PyObject *__pyx_self, int
   __pyx_v_len_p = 0;
 
   /* "primes.pyx":7
- *         nb_primes = 1000
+ *         nb_primes = 90000
  *     len_p = 0  # The current number of elements in p.
  *     n = 2             # <<<<<<<<<<<<<<
  *     while len_p < nb_primes:
@@ -2507,7 +2507,7 @@ static PyObject *__pyx_pf_6primes_primes(CYTHON_UNUSED PyObject *__pyx_self, int
   /* "primes.pyx":1
  * def primes(int nb_primes):             # <<<<<<<<<<<<<<
  *     cdef int n, i, len_p
- *     cdef int[1000] p
+ *     cdef int[90000] p
  */
 
   /* function exit code */
@@ -2572,7 +2572,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "primes.pyx":1
  * def primes(int nb_primes):             # <<<<<<<<<<<<<<
  *     cdef int n, i, len_p
- *     cdef int[1000] p
+ *     cdef int[90000] p
  */
   __pyx_tuple_ = PyTuple_Pack(7, __pyx_n_s_nb_primes, __pyx_n_s_n, __pyx_n_s_i, __pyx_n_s_len_p, __pyx_n_s_p, __pyx_n_s_result_as_list, __pyx_n_s_prime); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple_);
@@ -2944,7 +2944,7 @@ if (!__Pyx_RefNanny) {
   /* "primes.pyx":1
  * def primes(int nb_primes):             # <<<<<<<<<<<<<<
  *     cdef int n, i, len_p
- *     cdef int[1000] p
+ *     cdef int[90000] p
  */
   __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6primes_1primes, 0, __pyx_n_s_primes, NULL, __pyx_n_s_primes, __pyx_d, ((PyObject *)__pyx_codeobj__2)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
