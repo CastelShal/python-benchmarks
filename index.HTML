@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python Performance and Parallelization</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#performance-comparison">Performance Comparison</a></li>
+            <li><a href="#results">Benchmark Results</a></li>
+            <li><a href="#parallelization">Parallelization and Profiling</a></li>
+            <li><a href="#scalability">Scalability Analysis</a></li>
+        </ul>
+    </nav>
+  <header>
+    <h1>Python Performance and Parallelization Analysis</h1>
+    
+  </header>
+
+  <main>
+   
+    <section id="performance-comparison">
+      <h2>Performance Comparison of Python Implementations</h2>
+      <p>Python comes in multiple flavors tailored to different use cases. Here's a breakdown of the most popular ones:</p>
+
+      <h3>1. CPython</h3>
+      <p>
+        CPython is the default Python implementation, written in C. It is widely used for general-purpose programming.
+      </p>
+      <ul>
+        <li><b>Strengths:</b> Compatibility with C libraries, stable, widely supported.</li>
+        <li><b>Weaknesses:</b> Slower due to the Global Interpreter Lock (GIL).</li>
+      </ul>
+
+      <h3>2. PyPy</h3>
+      <p>
+        PyPy features a Just-In-Time (JIT) compiler that makes Python code run much faster, particularly for long-running tasks.
+      </p>
+      <ul>
+        <li><b>Strengths:</b> Fast execution, low memory usage.</li>
+        <li><b>Weaknesses:</b> Limited support for some C extensions.</li>
+      </ul>
+
+      <h3>3. Cython</h3>
+      <p>
+        Cython compiles Python to C for performance. It is excellent for computational tasks requiring maximum speed.
+      </p>
+      <ul>
+        <li><b>Strengths:</b> Near-C performance, easy to use with Python syntax.</li>
+        <li><b>Weaknesses:</b> Requires compilation, more complex setup.</li>
+      </ul>
+
+      <h3>4. Jython</h3>
+      <p>
+        Jython runs on the Java Virtual Machine (JVM), allowing seamless integration with Java codebases.
+      </p>
+      <ul>
+        <li><b>Strengths:</b> Integrates with Java libraries, ideal for Java applications.</li>
+        <li><b>Weaknesses:</b> Slower than CPython, no support for C-based libraries.</li>
+      </ul>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results">
+      <h2>Benchmark Results</h2>
+      <canvas id="benchmarkChart" width="600" height="300"></canvas>
+      <p><b>Insights:</b> 
+        <ul>
+          <li>Cython consistently outperformed other implementations, thanks to its compilation to native C code.</li>
+          <li>PyPy demonstrated competitive performance for larger inputs due to its JIT optimizations.</li>
+          <li>CPython showed balanced performance, benefiting from extensive library support but limited by the GIL.</li>
+          <li>Jython lagged behind, primarily due to the overhead of running on the JVM.</li>
+        </ul>
+      </p>
+    </section>
+
+    <!-- Parallelization Section -->
+    <section id="parallelization">
+      <h2>Parallelization and Profiling</h2>
+      <p>
+        Parallelization divides tasks into smaller parts that run on multiple processors, speeding up execution.
+      </p>
+      <h3>Techniques Used:</h3>
+      <ul>
+        <li><b>Process Pools:</b> Efficiently manage multiple processes.</li>
+        <li><b>Shared Memory:</b> Share data across processes to save memory.</li>
+      </ul>
+      <p><b>Key Insight:</b> Execution time was reduced by 45% on large datasets.</p>
+    </section>
+
+    <!-- Scalability Section -->
+    <section id="scalability">
+        <h2>Scalability Analysis</h2>
+        <p>
+          Scalability reflects an algorithm’s ability to handle increasing input sizes effectively. By distributing workloads across multiple cores, parallelization enhances scalability and reduces processing time for larger datasets.
+        </p>
+  
+        <h3>Key Observations:</h3>
+        <ul>
+          <li><b>Without Parallelization:</b> Execution time grows linearly with input size, leading to significant slowdowns for large datasets.</li>
+          <li><b>With Parallelization:</b> Workload is divided among processors, achieving faster execution for large inputs, though smaller datasets may not benefit as much due to overhead costs.</li>
+        </ul>
+        <canvas id="scalabilityChart"></canvas>
+        <p><b>Conclusion:</b> Effective parallelization strategies can transform computationally intensive workflows, making them feasible for real-world applications that involve big data.</p>
+      </section>
+    </main>
+  
+    <footer>
+      <p>Python Performance Analysis by Shalom and Kirti</p>
+    </footer>
+  <script src="script.js"></script>
+</body>
+</html>
